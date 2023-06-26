@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#top {
+  position: absolute;
+  top: 4%;
+  left: 30%;
+  transform: translate(-50%, -0%);
+}
+#bottom {
+  position: absolute;
+  bottom: 4%;
+  left: 20%;
+  transform: translate(-50%, -0%);
+}
+#content {
+  background-color: rgb(251, 251, 251);
+}
+main {
+  background-color: rgb(245, 245, 245);
+}
