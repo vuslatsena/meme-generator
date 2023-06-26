@@ -50,5 +50,5 @@ Before running the project, ensure that you have the following installed on your
 
 To run the project, use the following command:
 ```bash
-  npm run start
+  npm run dev
 ```

@@ -47,14 +47,14 @@ export default function Home() {
 
   const downloadMeme = () => {
     const memeContainer = memeContainerRef.current;
-  
+
     html2canvas(memeContainer, { useCORS: true }).then((canvas) => {
       canvas.toBlob((blob) => {
         saveAs(blob, "meme.png");
       });
     });
-  };  
-  
+  };
+
   return (
     <main className="bg-blue-900 flex min-h-screen flex-col items-center justify-center p-24">
       <div
@@ -64,13 +64,6 @@ export default function Home() {
         <div className=" flex flex-col gap-20 p-10">
           <div className="text-center grid gap-2">
             <h1 className="text-3xl">Meme Generator</h1>
-            <p>
-              Click{" "}
-              <button className="text-orange-600" onClick={getRandomMeme}>
-                Here
-              </button>{" "}
-              to get a random meme template!
-            </p>
           </div>
           {randomMeme ? (
             <div className="relative" ref={memeContainerRef}>
@@ -118,6 +111,11 @@ export default function Home() {
               />
             </div>
           )}
+          <div className="flex justify-center items-center">
+            <button className="text-blue-600 border border-blue-600 rounded-md px-4 py-2 hover:bg-blue-600 hover:text-white" onClick={getRandomMeme}>
+              Pick Random Image
+            </button>
+          </div>
         </div>
         <div className="lg:border-l-2 border-t-2 lg:border-t-0 p-8 grid gap-4">
           <div className="">
